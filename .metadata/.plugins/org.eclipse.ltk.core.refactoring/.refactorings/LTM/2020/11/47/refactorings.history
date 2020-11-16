@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CallingMessenger.java&apos; to &apos;LTMCK/src/Models&apos;&#x0D;&#x0A;- Original project: &apos;LTM&apos;&#x0D;&#x0A;- Destination element: &apos;LTMCK/src/Models&apos;&#x0D;&#x0A;- Original element: &apos;vnakhoa.vku.Model.CallingMessenger.java&apos;" description="Copy compilation unit" destination="=LTMCK/src&lt;Models" element1="/src&lt;vnakhoa.vku.Model{CallingMessenger.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1605532328115" units="1" version="1.0"/>
+</session>

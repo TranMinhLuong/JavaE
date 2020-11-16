@@ -1,0 +1,59 @@
+package Clients;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+
+public class CallClients extends JFrame {
+
+	private JPanel contentPane;
+	JLabel lbldifClient;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CallClients frame = new CallClients();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public CallClients() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 617, 506);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panelClient = new JPanel();
+		panelClient.setBounds(10, 11, 581, 219);
+		contentPane.add(panelClient);
+		
+		lbldifClient = new JLabel("");
+		lbldifClient.setBounds(10, 241, 581, 215);
+		contentPane.add(lbldifClient);
+	}
+	
+	public ImageIcon reIcon(byte[] path) {
+		ImageIcon img = new ImageIcon(path);
+		Image im = img.getImage().getScaledInstance(lbldifClient.getWidth(), lbldifClient.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon anh = new ImageIcon(im);
+		return anh;
+	}
+}

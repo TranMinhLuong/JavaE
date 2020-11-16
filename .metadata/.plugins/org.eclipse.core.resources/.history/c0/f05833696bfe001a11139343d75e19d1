@@ -1,0 +1,87 @@
+package tmluong.vku.chatltm.Client;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import tmluong.vku.chatltm.Model.User;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Color;
+
+public class ClientGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtUsername;
+	private JButton btnOk;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ClientGUI frame = new ClientGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 385, 204);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblAlert = new JLabel("M\u1EDDi nh\u1EADp t\u00EAn c\u1EE7a b\u1EA1n:");
+		lblAlert.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblAlert.setBounds(10, 29, 199, 26);
+		contentPane.add(lblAlert);
+		
+		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		txtUsername.setBounds(31, 84, 217, 26);
+		contentPane.add(txtUsername);
+		txtUsername.setColumns(10);
+		
+		btnOk = new JButton("Accept");
+		btnOk.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		btnOk.setBackground(Color.LIGHT_GRAY);
+		btnOk.setBounds(268, 84, 88, 26);
+		contentPane.add(btnOk);
+		
+		addControls();
+	}
+
+	private void addControls() {
+		// TODO Auto-generated method stub
+		btnOk.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+//				User user = new User();
+//				user.setUser(txtUsername.toString());
+				System.out.println("Tên là"+txtUsername);
+			}
+		});
+	}
+}

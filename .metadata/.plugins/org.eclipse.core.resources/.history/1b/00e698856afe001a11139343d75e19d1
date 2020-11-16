@@ -1,0 +1,72 @@
+package tmluong.vku.chatltm.Client;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Color;
+
+public class ClientGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtUsername;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ClientGUI frame = new ClientGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 385, 204);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblAlert = new JLabel("M\u1EDDi nh\u1EADp t\u00EAn c\u1EE7a b\u1EA1n:");
+		lblAlert.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblAlert.setBounds(10, 29, 199, 26);
+		contentPane.add(lblAlert);
+		
+		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		txtUsername.setBounds(31, 84, 217, 26);
+		contentPane.add(txtUsername);
+		txtUsername.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Accept");
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		btnNewButton.setBackground(Color.LIGHT_GRAY);
+		btnNewButton.setBounds(268, 84, 88, 26);
+		contentPane.add(btnNewButton);
+		
+		addControls();
+	}
+
+	private void addControls() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+}
